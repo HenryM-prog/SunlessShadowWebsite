@@ -161,9 +161,11 @@ nav {
 
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-columns: minmax(320px, repeat(3, 1fr));*/
+    grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
     text-align: left;
     grid-gap: 5px;
+    
     
 }
 
@@ -187,25 +189,21 @@ h2{
 }
 
 .img-1{
-    width: 472px;
+    width: 100%;
     height: auto;
-    margin-left: 5px;
-    border: 2px solid black;
+    margin-left: 0;
+    
 }
 
 .img-2{
-    width: 472px;
+    width: 100%;
     height: auto;
-    margin-right: 0;
-    border: 2px solid black;
+    margin-right: 0;  
     
 }
 .img-3{
-    width: 472px;
+    width: 100%;
     height: auto;
-    border: 2px solid black;
-    
-    
 }
 
 /*End of Homepage Top Section*/
@@ -222,22 +220,19 @@ main{
 
 }
 
+.homepage-bottom-content{
+    text-align: center;
+    font-size: 10vh;
+    color: white;
+}
+
 
 .content {
     min-height: calc(100vh - 70px);
   }
-
-
-
-
-#homepage-bottom{
-    font-size: 10vh;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: white;
-    text-align: center;
-}
 /*Homepage Bottom Section*/
+
+
 
 /*About me Top Section*/
 .about-me-title{
@@ -261,7 +256,7 @@ main{
 
 .grid-container-2{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: minmax(320px, 1fr 1fr 1fr);
     margin-top: 30px;
 }
 
@@ -524,6 +519,56 @@ main{
 /*Footer Section Media Queries*/
 @media only screen and (max-width: 900px){
 
+    
+    
+    h2{
+        text-align: center;
+    }
+    
+    .walkthrough-p{
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    
+    .reviews-p{
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    
+    .tips-and-tricks-p{
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    
+    .img-1{
+        width: 100%;
+        height: auto;
+        margin: 0px;
+        
+    }
+    
+    .img-2{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        
+        
+    }
+    .img-3{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .homepage-bottom-content{
+        text-align: center;
+        font-size: 7vh;
+        color: white;
+    }
+
 .about-me-paragraph{
     font-size: 1.8vh;
     
@@ -537,6 +582,7 @@ main{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     margin-top: 30px;
+
 }
 
 .column-2{
@@ -650,19 +696,19 @@ main{
 
 .footer-section .contact-form{
     padding: 10px;
+    text-align: center;
 }
 
 .text-input-contact-input{
     text-align: center;
     padding: 10px;
-    
 }
 
 .btn-btn-big{
     text-align: center;
-    align-items: center;
-    
+    float: left;
 }
+
 }
 
 
